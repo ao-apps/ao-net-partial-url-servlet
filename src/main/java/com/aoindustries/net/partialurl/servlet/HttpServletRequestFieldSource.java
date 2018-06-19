@@ -23,7 +23,6 @@
 package com.aoindustries.net.partialurl.servlet;
 
 import com.aoindustries.net.HostAddress;
-import com.aoindustries.net.InetAddress;
 import com.aoindustries.net.Path;
 import com.aoindustries.net.Port;
 import com.aoindustries.net.Protocol;
@@ -77,22 +76,7 @@ public class HttpServletRequestFieldSource implements FieldSource {
 	public HostAddress getHost() throws MalformedURLException {
 		if(host == null) {
 			try {
-				String serverName = request.getServerName();
-				int serverNameLen = serverName.length();
-				if(
-					serverNameLen >= 2
-					&& serverName.charAt(0) == '['
-					&& serverName.charAt(serverNameLen - 1) == ']'
-				) {
-					// Strip [...] from IPv6
-					host = HostAddress.valueOf(
-						InetAddress.valueOf(
-							serverName.substring(1, serverNameLen - 1)
-						)
-					);
-				} else {
-					host = HostAddress.valueOf(serverName);
-				}
+				host = HostAddress.valueOf(request.getServerName());
 			} catch(ValidationException e) {
 				MalformedURLException newErr = new MalformedURLException();
 				newErr.initCause(e);
