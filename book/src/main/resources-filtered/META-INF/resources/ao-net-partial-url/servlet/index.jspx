@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-ao-net-partial-servlet - Matches and resolves partial URLs in a Servlet environment.
+ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
 Copyright (C) 2018, 2019  AO Industries, Inc.
     support@aoindustries.com
     7262 Bull Pen Cir
     Mobile, AL 36695
 
-This file is part of ao-net-partial-servlet.
+This file is part of ao-net-partial-url-servlet.
 
-ao-net-partial-servlet is free software: you can redistribute it and/or modify
+ao-net-partial-url-servlet is free software: you can redistribute it and/or modify
 it under the terms of the GNU Lesser General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-ao-net-partial-servlet is distributed in the hope that it will be useful,
+ao-net-partial-url-servlet is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public License
-along with ao-net-partial-servlet.  If not, see <http://www.gnu.org/licenses />.
+along with ao-net-partial-url-servlet.  If not, see <http://www.gnu.org/licenses />.
 -->
 <jsp:root
 	xmlns:ao="https://aoindustries.com/ao-taglib/"
