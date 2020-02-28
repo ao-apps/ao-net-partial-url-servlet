@@ -1,6 +1,6 @@
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2018  AO Industries, Inc.
+ * Copyright (C) 2018, 2020  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -36,8 +36,10 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Obtains fields for {@link PartialURL} from a {@link HttpServletRequest}.
- *
- * @implSpec  This implementation is not thread safe due to results caching.
+ * <p>
+ * <b>Implementation Note:</b><br />
+ * This implementation is not thread safe due to results caching.
+ * </p>
  *
  * @see  URLFieldSource
  */
@@ -88,8 +90,10 @@ public class HttpServletRequestFieldSource implements FieldSource {
 
 	/**
 	 * {@inheritDoc}
-	 *
-	 * @implNote  The implementation assumes {@link Protocol#TCP}.
+	 * <p>
+	 * <b>Implementation Note:</b><br />
+	 * The implementation assumes {@link Protocol#TCP}.
+	 * </p>
 	 *
 	 * @see  ServletRequest#getServerPort()
 	 */
