@@ -30,7 +30,7 @@ Matches and resolves partial URLs in a Servlet environment.
 * [Project Home](https://aoindustries.com/ao-net-partial-url/servlet/)
 * [Changelog](https://aoindustries.com/ao-net-partial-url/servlet/changelog)
 * [API Docs](https://aoindustries.com/ao-net-partial-url/servlet/apidocs/)
-* [Maven Central Repository](https://search.maven.org/#search%7Cgav%7C1%7Cg:%22com.aoindustries%22%20AND%20a:%22ao-net-partial-url-servlet%22)
+* [Maven Central Repository](https://search.maven.org/artifact/com.aoindustries/ao-net-partial-url-servlet)
 * [GitHub](https://github.com/aoindustries/ao-net-partial-url-servlet)
 
 ## Contact Us
