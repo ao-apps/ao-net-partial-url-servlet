@@ -43,6 +43,29 @@ along with ao-net-partial-url-servlet.  If not, see <http://www.gnu.org/licenses
 	<description>Matches and resolves partial URLs in a Servlet environment.</description>
 	<inceptionYear>2018</inceptionYear>
 
+	<licenses>
+		<license>
+			<name>GNU General Lesser Public License (LGPL) version 3.0</name>
+			<url>https://www.gnu.org/licenses/lgpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>AO Industries, Inc.</name>
+		<url>https://aoindustries.com/</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<name>AO Industries, Inc.</name>
+			<email>support@aoindustries.com</email>
+			<url>https://aoindustries.com/</url>
+			<organization>AO Industries, Inc.</organization>
+			<organizationUrl>https://aoindustries.com/</organizationUrl>
+		</developer>
+	</developers>
+
 	<scm>
 		<connection>scm:git:git://github.com/aoindustries/ao-net-partial-url-servlet.git</connection>
 		<developerConnection>scm:git:git@github.com:aoindustries/ao-net-partial-url-servlet.git</developerConnection>
