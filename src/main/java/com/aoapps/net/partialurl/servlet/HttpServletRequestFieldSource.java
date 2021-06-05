@@ -1,6 +1,6 @@
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2018, 2020  AO Industries, Inc.
+ * Copyright (C) 2018, 2020, 2021  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,16 +20,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-net-partial-url-servlet.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.aoindustries.net.partialurl.servlet;
+package com.aoapps.net.partialurl.servlet;
 
-import com.aoindustries.net.HostAddress;
-import com.aoindustries.net.Path;
-import com.aoindustries.net.Port;
-import com.aoindustries.net.Protocol;
-import com.aoindustries.net.partialurl.FieldSource;
-import com.aoindustries.net.partialurl.PartialURL;
-import com.aoindustries.net.partialurl.URLFieldSource;
-import com.aoindustries.validation.ValidationException;
+import com.aoapps.lang.validation.ValidationException;
+import com.aoapps.net.HostAddress;
+import com.aoapps.net.Path;
+import com.aoapps.net.Port;
+import com.aoapps.net.Protocol;
+import com.aoapps.net.partialurl.FieldSource;
+import com.aoapps.net.partialurl.PartialURL;
+import com.aoapps.net.partialurl.URLFieldSource;
 import java.net.MalformedURLException;
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
