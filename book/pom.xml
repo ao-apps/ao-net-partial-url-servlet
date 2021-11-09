@@ -96,9 +96,6 @@ along with ao-net-partial-url-servlet.  If not, see <https://www.gnu.org/license
 			<releases>
 				<enabled>false</enabled>
 			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
 		</repository>
 	</repositories>
 
