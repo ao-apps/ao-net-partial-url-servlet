@@ -1,6 +1,6 @@
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2018, 2020, 2021  AO Industries, Inc.
+ * Copyright (C) 2018, 2020, 2021, 2022  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -20,6 +20,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ao-net-partial-url-servlet.  If not, see <https://www.gnu.org/licenses/>.
  */
+
 package com.aoapps.net.partialurl.servlet;
 
 import com.aoapps.lang.validation.ValidationException;
