@@ -46,111 +46,113 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class HttpServletRequestFieldSource implements FieldSource {
 
-	private final HttpServletRequest request;
+  private final HttpServletRequest request;
 
-	// Cached results
-	private String scheme;
-	private HostAddress host;
-	private Port port;
-	private Path contextPath;
-	private Path path;
+  // Cached results
+  private String scheme;
+  private HostAddress host;
+  private Port port;
+  private Path contextPath;
+  private Path path;
 
-	public HttpServletRequestFieldSource(HttpServletRequest request) {
-		this.request = request;
-	}
+  public HttpServletRequestFieldSource(HttpServletRequest request) {
+    this.request = request;
+  }
 
-	/**
-	 * @see  ServletRequest#getScheme()
-	 */
-	@Override
-	public String getScheme() {
-		if(scheme == null) scheme = request.getScheme();
-		return scheme;
-	}
+  /**
+   * @see  ServletRequest#getScheme()
+   */
+  @Override
+  public String getScheme() {
+    if (scheme == null) {
+      scheme = request.getScheme();
+    }
+    return scheme;
+  }
 
-	/**
-	 * @see  ServletRequest#getServerName()
-	 */
-	@Override
-	public HostAddress getHost() throws MalformedURLException {
-		if(host == null) {
-			try {
-				host = HostAddress.valueOf(request.getServerName());
-			} catch(ValidationException e) {
-				MalformedURLException newErr = new MalformedURLException();
-				newErr.initCause(e);
-				throw newErr;
-			}
-		}
-		return host;
-	}
+  /**
+   * @see  ServletRequest#getServerName()
+   */
+  @Override
+  public HostAddress getHost() throws MalformedURLException {
+    if (host == null) {
+      try {
+        host = HostAddress.valueOf(request.getServerName());
+      } catch (ValidationException e) {
+        MalformedURLException newErr = new MalformedURLException();
+        newErr.initCause(e);
+        throw newErr;
+      }
+    }
+    return host;
+  }
 
-	/**
-	 * {@inheritDoc}
-	 * <p>
-	 * <b>Implementation Note:</b><br>
-	 * The implementation assumes {@link Protocol#TCP}.
-	 * </p>
-	 *
-	 * @see  ServletRequest#getServerPort()
-	 */
-	@Override
-	public Port getPort() throws MalformedURLException {
-		if(port == null) {
-			try {
-				port = Port.valueOf(request.getServerPort(), Protocol.TCP);
-			} catch(ValidationException e) {
-				MalformedURLException newErr = new MalformedURLException();
-				newErr.initCause(e);
-				throw newErr;
-			}
-		}
-		return port;
-	}
+  /**
+   * {@inheritDoc}
+   * <p>
+   * <b>Implementation Note:</b><br>
+   * The implementation assumes {@link Protocol#TCP}.
+   * </p>
+   *
+   * @see  ServletRequest#getServerPort()
+   */
+  @Override
+  public Port getPort() throws MalformedURLException {
+    if (port == null) {
+      try {
+        port = Port.valueOf(request.getServerPort(), Protocol.TCP);
+      } catch (ValidationException e) {
+        MalformedURLException newErr = new MalformedURLException();
+        newErr.initCause(e);
+        throw newErr;
+      }
+    }
+    return port;
+  }
 
-	/**
-	 * @see  HttpServletRequest#getContextPath()
-	 */
-	@Override
-	public Path getContextPath() throws MalformedURLException {
-		if(contextPath == null) {
-			try {
-				String cp = request.getContextPath();
-				contextPath = cp.isEmpty() ? Path.ROOT : Path.valueOf(cp);
-			} catch(ValidationException e) {
-				MalformedURLException newErr = new MalformedURLException();
-				newErr.initCause(e);
-				throw newErr;
-			}
-		}
-		return contextPath;
-	}
+  /**
+   * @see  HttpServletRequest#getContextPath()
+   */
+  @Override
+  public Path getContextPath() throws MalformedURLException {
+    if (contextPath == null) {
+      try {
+        String cp = request.getContextPath();
+        contextPath = cp.isEmpty() ? Path.ROOT : Path.valueOf(cp);
+      } catch (ValidationException e) {
+        MalformedURLException newErr = new MalformedURLException();
+        newErr.initCause(e);
+        throw newErr;
+      }
+    }
+    return contextPath;
+  }
 
-	/**
-	 * @see  HttpServletRequest#getServletPath()
-	 * @see  HttpServletRequest#getPathInfo()
-	 */
-	@Override
-	public Path getPath() throws MalformedURLException {
-		if(path == null) {
-			try {
-				String servletPath = request.getServletPath(); // Might be empty string ""
-				String pathInfo = request.getPathInfo(); // Might be null, but never empty
-				if(servletPath.isEmpty()) {
-					path = Path.valueOf(pathInfo);
-				} else {
-					if(pathInfo == null) {
-						path = Path.valueOf(servletPath);
-					} else {
-						path = Path.valueOf(servletPath + pathInfo);
-					}
-				}
-			} catch(ValidationException e) {
-				MalformedURLException newErr = new MalformedURLException();
-				newErr.initCause(e);
-				throw newErr;
-			}
-		}
-		return path;
-	}
+  /**
+   * @see  HttpServletRequest#getServletPath()
+   * @see  HttpServletRequest#getPathInfo()
+   */
+  @Override
+  public Path getPath() throws MalformedURLException {
+    if (path == null) {
+      try {
+        String servletPath = request.getServletPath(); // Might be empty string ""
+        String pathInfo = request.getPathInfo(); // Might be null, but never empty
+        if (servletPath.isEmpty()) {
+          path = Path.valueOf(pathInfo);
+        } else {
+          if (pathInfo == null) {
+            path = Path.valueOf(servletPath);
+          } else {
+            path = Path.valueOf(servletPath + pathInfo);
+          }
+        }
+      } catch (ValidationException e) {
+        MalformedURLException newErr = new MalformedURLException();
+        newErr.initCause(e);
+        throw newErr;
+      }
+    }
+    return path;
+  }
 }
