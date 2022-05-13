@@ -27,4 +27,4 @@ module com.aoapps.net.partialurl.servlet {
   requires com.aoapps.net.partialurl; // <groupId>com.aoapps</groupId><artifactId>ao-net-partial-url</artifactId>
   requires com.aoapps.net.types; // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
   requires javax.servlet.api; // <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
-} // TODO: Avoiding rewrite-maven-plugin-4.22.2 truncation
+}
