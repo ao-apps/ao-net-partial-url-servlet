@@ -33,6 +33,8 @@ along with ao-net-partial-url-servlet.  If not, see <https://www.gnu.org/license
   <packaging>jar</packaging>
 
   <properties>
+    <!-- Must be set to ${git.commit.time} for snapshots or ISO 8601 timestamp for releases. -->
+    <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
     <module.name>com.aoapps.net.partialurl.servlet.book</module.name>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>ao-net-partial-url-servlet</documented.artifactId>
