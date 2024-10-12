@@ -1,6 +1,6 @@
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2018, 2020, 2021, 2022  AO Industries, Inc.
+ * Copyright (C) 2018, 2020, 2021, 2022, 2024  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -55,6 +55,9 @@ public class HttpServletRequestFieldSource implements FieldSource {
   private Path contextPath;
   private Path path;
 
+  /**
+   * Creates a new {@link HttpServletRequestFieldSource}.
+   */
   public HttpServletRequestFieldSource(HttpServletRequest request) {
     this.request = request;
   }
