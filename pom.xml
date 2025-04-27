@@ -237,7 +237,7 @@ along with ao-net-partial-url-servlet.  If not, see <https://www.gnu.org/license
         <groupId>com.aoapps</groupId><artifactId>ao-tlds</artifactId><version>2.1.0-SNAPSHOT<!-- ${POST-SNAPSHOT} --></version>
       </dependency>
       <dependency>
-        <groupId>org.apache.commons</groupId><artifactId>commons-collections4</artifactId><version>4.4</version>
+        <groupId>org.apache.commons</groupId><artifactId>commons-collections4</artifactId><version>4.5.0</version>
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId><artifactId>commons-lang3</artifactId><version>3.17.0</version>
