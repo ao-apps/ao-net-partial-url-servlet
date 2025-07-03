@@ -23,7 +23,7 @@ Matches and resolves partial URLs in a Servlet environment.
 * [Project Home](https://oss.aoapps.com/net-partial-url/servlet/)
 * [Changelog](https://oss.aoapps.com/net-partial-url/servlet/changelog)
 * [API Docs](https://oss.aoapps.com/net-partial-url/servlet/apidocs/)
-* [Maven Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-net-partial-url-servlet)
+* [Central Repository](https://central.sonatype.com/artifact/com.aoapps/ao-net-partial-url-servlet)
 * [GitHub](https://github.com/ao-apps/ao-net-partial-url-servlet)
 
 ## Contact Us
