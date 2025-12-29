@@ -37,6 +37,9 @@ along with ao-net-partial-url-servlet.  If not, see <https://www.gnu.org/license
     <project.build.outputTimestamp>${git.commit.time}</project.build.outputTimestamp>
     <module.name>com.aoapps.net.partialurl.servlet.book</module.name>
     <subproject.subpath>book/</subproject.subpath>
+    <!-- Java 17 -->
+    <javase.version>17</javase.version>
+    <javase.release>17</javase.release>
     <!-- These values are copied from the project being documented -->
     <documented.artifactId>ao-net-partial-url-servlet</documented.artifactId>
     <documented.name>AO Net Partial URL Servlet</documented.name>
