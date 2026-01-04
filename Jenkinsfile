@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2021, 2022, 2023, 2024, 2025  AO Industries, Inc.
+ * Copyright (C) 2021, 2022, 2023, 2024, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -37,10 +37,10 @@ def upstreamProjects = [
   'lang', // <groupId>com.aoapps</groupId><artifactId>ao-lang</artifactId>
   'net-partial-url', // <groupId>com.aoapps</groupId><artifactId>ao-net-partial-url</artifactId>
   'net-types', // <groupId>com.aoapps</groupId><artifactId>ao-net-types</artifactId>
-  // No Jenkins: <groupId>javax.servlet</groupId><artifactId>javax.servlet-api</artifactId>
+  // No Jenkins: <groupId>jakarta.servlet</groupId><artifactId>jakarta.servlet-api</artifactId>
 
   // BOM
-  'javaee-web-api-bom', // <groupId>com.aoapps</groupId><artifactId>javaee-web-api-bom</artifactId>
+  'jakartaee-web-profile-bom', // <groupId>com.aoapps</groupId><artifactId>jakartaee-web-profile-bom</artifactId>
 ]
 
 /******************************************************************************************

@@ -1,6 +1,6 @@
 /*
  * ao-net-partial-url-servlet - Matches and resolves partial URLs in a Servlet environment.
- * Copyright (C) 2018, 2020, 2021, 2022, 2024  AO Industries, Inc.
+ * Copyright (C) 2018, 2020, 2021, 2022, 2024, 2025, 2026  AO Industries, Inc.
  *     support@aoindustries.com
  *     7262 Bull Pen Cir
  *     Mobile, AL 36695
@@ -31,9 +31,9 @@ import com.aoapps.net.Protocol;
 import com.aoapps.net.partialurl.FieldSource;
 import com.aoapps.net.partialurl.PartialURL;
 import com.aoapps.net.partialurl.URLFieldSource;
+import jakarta.servlet.ServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 import java.net.MalformedURLException;
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
 
 /**
  * Obtains fields for {@link PartialURL} from a {@link HttpServletRequest}.
